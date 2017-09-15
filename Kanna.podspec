@@ -15,8 +15,4 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.preserve_path = 'Modules/*'
   s.source_files  = ['Sources/**/*.swift', 'Sources/**/*.h']
-  s.xcconfig      = {
-                      'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2',
-                      'SWIFT_INCLUDE_PATHS' => '$(SRCROOT)/Kanna/Modules'
-                    }
 end
