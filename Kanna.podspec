@@ -13,10 +13,6 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = "9.0"
   s.watchos.deployment_target = "2.0"
   s.requires_arc = true
-  s.preserve_path = 'Modules/*'
+  s.preserve_path = 'Modules/*', 'Utils/*'
   s.source_files  = ['Sources/**/*.swift', 'Sources/**/*.h']
-  s.pod_target_xcconfig      = {
-                      'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2',
-                      'SWIFT_INCLUDE_PATHS' => '$(SRCROOT)/Kanna/Modules'
-                    }
 end
