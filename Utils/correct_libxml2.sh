@@ -8,7 +8,7 @@ if [[ x${SDKROOT} == "x" ]] ; then
 fi
 
 echo 'Patching modulemap…'
-patch ${SDKROOT}/usr/include/module.modulemap libxml2.diff
+patch ${SDKROOT}/usr/include/module.modulemap $(dirname $0)/libxml2.diff
 
 echo 'Symlinking libxml2…'
 ln -s ${SDKROOT}/usr/include/libxml2/libxml ${SDKROOT}/usr/include/libxml
